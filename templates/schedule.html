@@ -1,0 +1,363 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weekly class schedule at Vinyasa Yoga and Pilates - Expert-led sessions with small class sizes.">
+    <title>Class Schedule | Vinyasa Pilates & Yoga</title>
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/schedule.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="{% static 'images/logo.png' %}" alt="Vinyasa Yoga & Pilates Logo">
+                    </div>
+                    <span class="logo-text">Vinyasa</span>
+                </div>
+                <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/about" class="nav-link">Our Sanctuary</a></li>
+                    <li><a href="/practice" class="nav-link">Practice</a></li>
+                    <li><a href="/schedule" class="nav-link active">Schedule</a></li>
+                    <li><a href="/memberships" class="nav-link">Memberships</a></li>
+                    <li><a href="/contact" class="nav-link">Contact</a></li>
+                    <li><a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Free Registration</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Schedule Hero -->
+    <section class="schedule-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Weekly Schedule</h1>
+                <p class="hero-subtitle">Expert-led classes with our certified instructors. Small groups, personalized attention.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Info -->
+    <section class="schedule-info">
+        <div class="container">
+        </div>
+    </section>
+
+    <!-- Weekly Schedule -->
+    <section class="weekly-schedule">
+        <div class="container">
+            <!-- Monday -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <h2>Monday</h2>
+                </div>
+                <div class="classes-grid">
+                    <div class="class-card">
+                        <div class="class-time">7:00 - 8:00 AM</div>
+                        <h3 class="class-name">Hatha Yoga</h3>
+                        <div class="class-meta">
+                            <span class="level">All Levels</span>
+                            <span class="instructor">Expert Session</span>
+                        </div>
+                        <p class="class-description">Gentle, slow-paced practice focusing on basic postures and breathing techniques. Perfect for beginners and stress relief.</p>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-time">6:00 - 7:00 PM</div>
+                        <h3 class="class-name">Vinyasa Flow</h3>
+                        <div class="class-meta">
+                            <span class="level intermediate">Intermediate</span>
+                            <span class="instructor">Expert Session</span>
+                        </div>
+                        <p class="class-description">Dynamic flowing sequences linking breath with movement. Builds strength, flexibility, and endurance.</p>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tuesday -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <h2>Tuesday</h2>
+                </div>
+                <div class="classes-grid">
+                    <div class="class-card">
+                        <div class="class-time">8:00 - 8:50 AM</div>
+                        <h3 class="class-name">Core Pilates</h3>
+                        <div class="class-meta">
+                            <span class="level">All Levels</span>
+                            <span class="instructor">Expert Session</span>
+                        </div>
+                        <p class="class-description">Mat-based exercises targeting core strength, posture, and stability. Controlled movements for functional fitness.</p>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-time">7:00 - 7:50 PM</div>
+                        <h3 class="class-name">Prenatal Yoga</h3>
+                        <div class="class-meta">
+                            <span class="level special">All Trimesters</span>
+                            <span class="instructor">Expert Session</span>
+                        </div>
+                        <p class="class-description">Safe, nurturing practice designed for pregnancy. Gentle poses, breathing, and relaxation techniques.</p>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wednesday -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <h2>Wednesday</h2>
+                </div>
+                <div class="classes-grid">
+                    <div class="class-card featured">
+                        <div class="class-time">7:00 - 8:15 AM</div>
+                        <h3 class="class-name">Vinyasa Flow</h3>
+                        <div class="class-meta">
+                            <span class="level">All Levels</span>
+                            <span class="instructor founder">Coach Deepak</span>
+                        </div>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                        </div>
+                    </div>
+                    <div class="class-card featured">
+                        <div class="class-time">12:00 - 1:00 PM</div>
+                        <h3 class="class-name">Lunch Flow</h3>
+                        <div class="class-meta">
+                            <span class="level">All Levels</span>
+                            <span class="instructor founder">Coach Deepak</span>
+                        </div>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thursday -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <h2>Thursday</h2>
+                </div>
+                <div class="classes-grid">
+                    <div class="class-card">
+                        <div class="class-time">8:00 - 9:00 AM</div>
+                        <h3 class="class-name">Advanced Pilates</h3>
+                        <div class="class-meta">
+                            <span class="level advanced">Advanced</span>
+                            <span class="instructor">Expert Session</span>
+                        </div>
+                        <p class="class-description">Challenging full-body workout with complex movements, props, and advanced techniques for experienced practitioners.</p>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-time">6:30 - 7:30 PM</div>
+                        <h3 class="class-name">Hatha Yoga</h3>
+                        <div class="class-meta">
+                            <span class="level beginner">Beginner</span>
+                            <span class="instructor">Expert Session</span>
+                        </div>
+                        <p class="class-description">Gentle introduction to yoga with basic poses, breathing techniques, and meditation for stress relief.</p>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Friday -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <h2>Friday</h2>
+                </div>
+                <div class="classes-grid">
+                    <div class="class-card">
+                        <div class="class-time">7:00 - 8:15 AM</div>
+                        <h3 class="class-name">Vinyasa Flow</h3>
+                        <div class="class-meta">
+                            <span class="level intermediate">Intermediate</span>
+                            <span class="instructor">Expert Session</span>
+                        </div>
+                        <p class="class-description">Dynamic flowing sequences linking breath with movement. Builds strength, flexibility, and mindfulness.</p>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-time">7:00 - 7:45 PM</div>
+                        <h3 class="class-name">Postnatal Recovery</h3>
+                        <div class="class-meta">
+                            <span class="level special">Postnatal</span>
+                            <span class="instructor">Expert Session</span>
+                        </div>
+                        <p class="class-description">Gentle recovery program for new mothers focusing on core restoration and stress relief.</p>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saturday -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <h2>Saturday</h2>
+                </div>
+                <div class="classes-grid">
+                    <div class="class-card">
+                        <div class="class-time">9:00 - 10:30 AM</div>
+                        <h3 class="class-name">Weekend Flow</h3>
+                        <div class="class-meta">
+                            <span class="level">All Levels</span>
+                            <span class="instructor">Expert Session</span>
+                        </div>
+                        <p class="class-description">Extended weekend practice combining yoga styles for a complete mind-body experience. All welcome.</p>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-time">11:00 - 12:00 PM</div>
+                        <h3 class="class-name">Core Pilates</h3>
+                        <div class="class-meta">
+                            <span class="level intermediate">Intermediate</span>
+                            <span class="instructor">Expert Session</span>
+                        </div>
+                        <p class="class-description">Focused core strengthening session with intermediate movements to improve stability and posture.</p>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sunday -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <h2>Sunday</h2>
+                </div>
+                <div class="classes-grid">
+                    <div class="class-card">
+                        <div class="class-time">10:00 - 11:15 AM</div>
+                        <h3 class="class-name">Gentle Flow</h3>
+                        <div class="class-meta">
+                            <span class="level">All Levels</span>
+                            <span class="instructor">Expert Session</span>
+                        </div>
+                        <p class="class-description">Slow-paced, meditative yoga focusing on relaxation and gentle stretching. Perfect for stress relief.</p>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-time">5:00 - 6:00 PM</div>
+                        <h3 class="class-name">Restorative Yoga</h3>
+                        <div class="class-meta">
+                            <span class="level">All Levels</span>
+                            <span class="instructor">Expert Session</span>
+                        </div>
+                        <p class="class-description">Deep relaxation practice using props and long-held poses to restore energy and calm the mind.</p>
+                        <div class="class-actions">
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Features -->
+    <section class="schedule-features">
+        <div class="container">
+            <div class="features-grid-small">
+                <div class="feature-item">
+                    <div class="feature-badge">
+                        <span class="badge-icon">👥</span>
+                    </div>
+                    <h4>Small Classes</h4>
+                    <p>Intimate group settings for personalized attention</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-badge">
+                        <span class="badge-icon">⭐</span>
+                    </div>
+                    <h4>Expert Instruction</h4>
+                    <p>All classes taught by our certified expert team of instructors</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-badge">
+                        <span class="badge-icon">🕐</span>
+                    </div>
+                    <h4>Flexible Timing</h4>
+                    <p>Morning, afternoon, and evening options available</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-badge">
+                        <span class="badge-icon">📅</span>
+                    </div>
+                    <h4>Easy Booking</h4>
+                    <p>Reserve your spot online or call directly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-bg">
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Begin?</h2>
+                <p class="cta-subtitle">New to Vinyasa? Start with our Foundations class or book an introductory session to find the perfect practice for your needs.</p>
+                <div class="cta-buttons">
+                    <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-lg">Reserve Your Mat</a>
+                    <a href="https://forms.gle/a87VR1YXmBD96CBK9" target="_blank" class="btn btn-outline-white btn-lg">Book Intro Session</a>
+                    <a href="/memberships" class="btn btn-outline-white btn-lg">View Memberships</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

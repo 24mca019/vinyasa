@@ -1,0 +1,215 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Membership options at Vinyasa Yoga and Pilates - Choose the perfect package for your wellness journey.">
+    <title>Memberships | Vinyasa Pilates & Yoga</title>
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/memberships.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="{% static 'images/logo.png' %}" alt="Vinyasa Yoga & Pilates Logo">
+                    </div>
+                    <span class="logo-text">Vinyasa</span>
+                </div>
+                <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/about" class="nav-link">Our Sanctuary</a></li>
+                    <li><a href="/practice" class="nav-link">Practice</a></li>
+                    <li><a href="/schedule" class="nav-link">Schedule</a></li>
+                    <li><a href="/memberships" class="nav-link active">Memberships</a></li>
+                    <li><a href="/contact" class="nav-link">Contact</a></li>
+                    <li><a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Free Registration</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Memberships Hero -->
+    <section class="memberships-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Membership Options</h1>
+                <p class="hero-subtitle">Choose the perfect package for your wellness journey</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Drop-In -->
+                <div class="pricing-card drop-in">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Drop-In</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">800</span>
+                            <span class="period">per class</span>
+                        </div>
+                        <p class="plan-tagline">Try us out - no commitment</p>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ Single class access</li>
+                        <li>✓ All class types</li>
+                        <li>✓ Studio amenities</li>
+                    </ul>
+                    <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-outline btn-full">Book Class</a>
+                </div>
+
+                <!-- 5-Class Package -->
+                <div class="pricing-card class-pack">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">5-Class Package</h3>
+                        <div class="price">
+                            <span class="original-price">₹ 4,000</span>
+                            <span class="currency">₹</span>
+                            <span class="amount">3,500</span>
+                        </div>
+                        <div class="price-per">₹700 per class</div>
+                        <p class="plan-tagline">Great for establishing a regular practice</p>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ <strong>Save ₹500</strong></li>
+                        <li>✓ 5 classes to use anytime</li>
+                        <li>✓ Valid for 2 months</li>
+                        <li>✓ All class types included</li>
+                        <li>✓ Priority booking access</li>
+                        <li>✓ Complimentary amenities</li>
+                        <li>✓ 1 guest pass (2 classes)</li>
+                    </ul>
+                    <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-full">Reserve Your Mat</a>
+                    <p class="plan-note">Perfect for building consistency</p>
+                </div>
+
+                <!-- Monthly Unlimited -->
+                <div class="pricing-card monthly">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Monthly Unlimited</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">4,999</span>
+                            <span class="period">per month</span>
+                        </div>
+                        <p class="plan-tagline">Unlimited classes - best value</p>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ <strong>Unlimited classes</strong></li>
+                        <li>✓ All class types</li>
+                        <li>✓ Priority booking</li>
+                        <li>✓ Workshop discounts</li>
+                    </ul>
+                    <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-full">Start Membership</a>
+                </div>
+
+                <!-- Annual Membership -->
+                <div class="pricing-card annual">
+                    <div class="premium-badge">Premium</div>
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Annual Membership</h3>
+                        <div class="price">
+                            <span class="original-price">₹ 59,999</span>
+                            <span class="currency">₹</span>
+                            <span class="amount">49,999</span>
+                        </div>
+                        <div class="price-per">₹4,167 per month</div>
+                        <p class="plan-tagline">Ultimate wellness experience with exclusive benefits</p>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ <strong>Save ₹10,000</strong></li>
+                        <li>✓ Unlimited classes year-round</li>
+                        <li>✓ All class types & workshops</li>
+                        <li>✓ VIP booking privileges</li>
+                        <li>✓ Monthly 1-on-1 session</li>
+                        <li>✓ 2 guest passes (2 classes each)</li>
+                        <li>✓ Complimentary 3-month nutrition plan</li>
+                        <li>✓ Complimentary workshops</li>
+                        <li>✓ Exclusive member events</li>
+                        <li>✓ Free wellness consultation</li>
+                    </ul>
+                    <a href="https://forms.gle/B57AzXj2BdqLPpWB9" target="_blank" class="btn btn-primary btn-full">Book Your Slot</a>
+                    <p class="plan-note">For the committed wellness enthusiast</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="whats-included">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What's Included</h2>
+                <p class="section-subtitle">Professional expert guidance with premium amenities</p>
+            </div>
+            <div class="included-grid">
+                <div class="included-item">
+                    <div class="included-icon">
+                        👥
+                    </div>
+                    <h3>Small Classes</h3>
+                    <p>Maximum 8 students per class for personalized attention</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">
+                        ⭐
+                    </div>
+                    <h3>Expert Instruction</h3>
+                    <p>All classes taught by our certified expert team of instructors</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">
+                        🕐
+                    </div>
+                    <h3>Flexible Timing</h3>
+                    <p>Morning, afternoon, and evening options available</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">
+                        📅
+                    </div>
+                    <h3>Easy Booking</h3>
+                    <p>Reserve your spot online or call directly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-bg">
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start?</h2>
+                <p class="cta-subtitle">Book your first class or contact us with questions.</p>
+                <div class="cta-buttons">
+                    <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-lg">Book Class</a>
+                    <a href="https://forms.gle/a87VR1YXmBD96CBK9" target="_blank" class="btn btn-outline-white btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

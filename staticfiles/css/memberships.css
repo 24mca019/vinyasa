@@ -1,0 +1,816 @@
+/* Memberships Page Styles */
+
+/* Hero Section */
+.memberships-hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    padding: 180px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.memberships-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(201, 169, 97, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Pricing Info */
+.pricing-info {
+    padding: 60px 0;
+    background: var(--gray-100);
+}
+
+.info-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.info-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid var(--gray-200);
+}
+
+/* Pricing Card Color Variations */
+
+/* Drop-In: Calm & Natural Palette */
+.pricing-card.drop-in {
+    background: linear-gradient(135deg, #F7F7F5 0%, #ECEEED 100%);
+    border: 2px solid rgba(143, 151, 121, 0.2);
+    border-top: 4px solid #8F9779;
+    color: #3E403D;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.pricing-card.drop-in:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(143, 151, 121, 0.25);
+    border-top-color: #B09268;
+}
+
+.pricing-card.drop-in .plan-name,
+.pricing-card.drop-in .amount,
+.pricing-card.drop-in .currency,
+.pricing-card.drop-in .period,
+.pricing-card.drop-in .plan-description,
+.pricing-card.drop-in .feature-item {
+    color: #3E403D;
+}
+
+.pricing-card.drop-in .feature-item svg {
+    color: #8F9779;
+}
+
+.pricing-card.drop-in .pricing-header {
+    border-bottom-color: rgba(143, 151, 121, 0.2);
+}
+
+.pricing-card.drop-in .btn {
+    background: linear-gradient(135deg, #8F9779 0%, #B09268 100%);
+    color: var(--white);
+}
+
+/* 5-Class Pack: Serene & Deep Palette */
+.pricing-card.class-pack {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+    border: 2px solid rgba(42, 58, 89, 0.15);
+    border-top: 4px solid #2A3A59;
+    color: #2A3A59;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.pricing-card.class-pack:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(42, 58, 89, 0.2);
+    border-top-color: #C9A87C;
+}
+
+.pricing-card.class-pack .plan-name,
+.pricing-card.class-pack .amount,
+.pricing-card.class-pack .currency,
+.pricing-card.class-pack .period,
+.pricing-card.class-pack .plan-description,
+.pricing-card.class-pack .feature-item {
+    color: #2A3A59;
+}
+
+.pricing-card.class-pack .feature-item svg {
+    color: #C9A87C;
+}
+
+.pricing-card.class-pack .pricing-header {
+    border-bottom-color: rgba(42, 58, 89, 0.15);
+}
+
+.pricing-card.class-pack .btn {
+    background: linear-gradient(135deg, #C9A87C 0%, #d4b88a 100%);
+    color: var(--white);
+}
+
+/* Monthly: Warm & Earthy Palette */
+.pricing-card.monthly {
+    background: linear-gradient(135deg, #FFFBF5 0%, #FFF5EB 100%);
+    border: 2px solid rgba(93, 64, 55, 0.15);
+    border-top: 4px solid #BF5A36;
+    color: #5D4037;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.pricing-card.monthly:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(191, 90, 54, 0.2);
+    border-top-color: #5D4037;
+}
+
+.pricing-card.monthly .plan-name,
+.pricing-card.class-pack .amount,
+.pricing-card.class-pack .currency,
+.pricing-card.class-pack .period,
+.pricing-card.class-pack .plan-description,
+.pricing-card.class-pack .feature-item {
+    color: #2A3A59;
+}
+
+.pricing-card.class-pack .feature-item svg {
+    color: #C9A87C;
+}
+
+.pricing-card.class-pack .pricing-header {
+    border-bottom-color: rgba(42, 58, 89, 0.15);
+}
+
+.pricing-card.class-pack .btn {
+    background: linear-gradient(135deg, #C9A87C 0%, #d4b88a 100%);
+    color: var(--white);
+}
+
+/* Monthly: Warm & Earthy Palette */
+.pricing-card.monthly {
+    background: #FFFBF5;
+    border: 2px solid rgba(93, 64, 55, 0.15);
+    border-top: 4px solid #BF5A36;
+    color: #5D4037;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.pricing-card.monthly:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(191, 90, 54, 0.25);
+    border-top-color: #5D4037;
+}
+
+.pricing-card.monthly .plan-name,
+.pricing-card.monthly .amount,
+.pricing-card.monthly .currency,
+.pricing-card.monthly .period,
+.pricing-card.monthly .plan-description,
+.pricing-card.monthly .feature-item {
+    color: #5D4037;
+}
+
+.pricing-card.monthly .feature-item svg {
+    color: #BF5A36;
+}
+
+.pricing-card.monthly .pricing-header {
+    border-bottom-color: rgba(93, 64, 55, 0.15);
+}
+
+.pricing-card.monthly .btn {
+    background: linear-gradient(135deg, #BF5A36 0%, #d46d48 100%);
+    color: var(--white);
+}
+
+/* Annual: Exclusive & Modern (Dark Mode) */
+.pricing-card.annual {
+    background: #181818;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-top: 4px solid #D4AF37;
+    color: #E0E0E0;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.pricing-card.annual:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(212, 175, 55, 0.4);
+    border-top-color: #D4AF37;
+}
+
+.pricing-card.annual::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(212, 175, 55, 0.1) 50%,
+        transparent 70%
+    );
+    animation: shimmerEffect 4s infinite linear;
+    z-index: 0;
+}
+
+@keyframes shimmerEffect {
+    0% { transform: rotate(0deg) scale(1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.pricing-card.annual .plan-name,
+.pricing-card.annual .amount,
+.pricing-card.annual .currency,
+.pricing-card.annual .period,
+.pricing-card.annual .plan-description,
+.pricing-card.annual .feature-item {
+    color: #E0E0E0;
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-card.annual .feature-item svg {
+    color: #D4AF37;
+}
+
+.pricing-card.annual .pricing-header {
+    border-bottom-color: rgba(212, 175, 55, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-card.annual .btn {
+    background: #F0F0F0;
+    color: #181818;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-card.annual .btn:hover {
+    background: #D4AF37;
+    color: #181818;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+}
+
+/* Button styles for membership cards */
+.pricing-card .btn-primary {
+    background: linear-gradient(135deg, #8F9779 0%, #B09268 100%);
+    color: var(--white);
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(143, 151, 121, 0.4);
+}
+
+.pricing-card .btn-primary:hover {
+    background: linear-gradient(135deg, #B09268 0%, #8F9779 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(176, 146, 104, 0.5);
+}
+
+.pricing-card .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.pricing-card .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--white);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(122, 155, 142, 0.15);
+}
+
+/* Drop-In Card - Light Blue/Cyan */
+.pricing-card.drop-in-card {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    border-color: #00acc1;
+}
+
+.pricing-card.drop-in-card:hover {
+    box-shadow: 0 20px 60px rgba(0, 172, 193, 0.3);
+    border-color: #0097a7;
+}
+
+/* 5-Class Package - Light Green */
+.pricing-card.package-card {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-color: #66bb6a;
+}
+
+.pricing-card.package-card:hover {
+    box-shadow: 0 20px 60px rgba(102, 187, 106, 0.3);
+    border-color: #4caf50;
+}
+
+/* Monthly Unlimited - Primary Green (Popular) */
+.pricing-card.popular {
+    background: linear-gradient(135deg, #f1f8f6 0%, #d4e9e2 100%);
+    border-color: var(--primary);
+    box-shadow: 0 20px 60px rgba(122, 155, 142, 0.25);
+}
+
+.pricing-card.popular:hover {
+    box-shadow: 0 25px 70px rgba(122, 155, 142, 0.35);
+}
+
+/* Annual Membership - Golden/Premium */
+.pricing-card.premium {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffe082 100%);
+    border-color: var(--accent);
+    box-shadow: 0 20px 60px rgba(201, 169, 97, 0.3);
+}
+
+.pricing-card.premium:hover {
+    box-shadow: 0 25px 70px rgba(201, 169, 97, 0.4);
+}
+
+.popular-badge,
+.premium-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.popular-badge {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+}
+
+.premium-badge {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    color: var(--dark);
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.plan-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.currency {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1;
+}
+
+.period {
+    font-size: 1rem;
+    color: var(--gray-600);
+    margin-left: 0.25rem;
+}
+
+.original-price {
+    display: block;
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--gray-500);
+    text-decoration: line-through;
+    margin-bottom: 0.5rem;
+}
+
+.price-per {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.plan-tagline {
+    color: var(--gray-600);
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.features-list li {
+    padding: 0.75rem 0;
+    color: var(--gray-700);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.features-list li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: var(--primary);
+    border-radius: 50%;
+    margin-top: 0.6rem;
+    flex-shrink: 0;
+}
+
+.features-list li strong {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.plan-note {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+.btn-full {
+    width: 100%;
+    justify-content: center;
+}
+
+/* What's Included Section */
+.whats-included {
+    padding: 60px 0;
+    background: var(--gray-100);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.included-item {
+    text-align: center;
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+    border: 2px solid rgba(143, 151, 121, 0.2);
+    border-top: 4px solid #8F9779;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.included-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(143, 151, 121, 0.25), 0 10px 20px rgba(0, 0, 0, 0.12);
+    border-top-color: #B09268;
+    border-color: rgba(176, 146, 104, 0.3);
+}
+
+.included-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #8F9779 0%, #B09268 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    box-shadow: 0 10px 30px rgba(143, 151, 121, 0.3);
+    font-size: 3rem;
+    transition: all 0.3s ease;
+}
+
+.included-item:hover .included-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 40px rgba(176, 146, 104, 0.4);
+}
+
+.included-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+}
+
+.included-item p {
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
+    z-index: 0;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(201, 169, 97, 0.15) 0%, transparent 50%);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-outline-white:hover {
+    background: var(--white);
+    color: var(--primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .memberships-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem !important;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem !important;
+        line-height: 1.5;
+    }
+
+    .pricing-info,
+    .pricing-section,
+    .whats-included {
+        padding: 40px 0;
+    }
+
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .pricing-card {
+        padding: 1.75rem;
+    }
+
+    .amount {
+        font-size: 2.5rem;
+    }
+
+    .included-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .included-item {
+        padding: 2rem 1.5rem;
+    }
+    
+    .feature-badge {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .badge-icon {
+        font-size: 2.5rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem !important;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem !important;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .btn-lg {
+        width: 100%;
+        justify-content: center;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .memberships-hero {
+        padding: 80px 0 50px;
+    }
+    
+    .pricing-card {
+        padding: 1.5rem;
+    }
+
+    .amount {
+        font-size: 2rem;
+    }
+    
+    .plan-name {
+        font-size: 1.5rem;
+    }
+
+    .included-icon {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .feature-badge {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .badge-icon {
+        font-size: 2.25rem;
+    }
+
+    .included-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .features-list li {
+        font-size: 0.9rem;
+    }
+}

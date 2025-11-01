@@ -1,0 +1,361 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vinyasa Yoga and Pilates - A tranquil urban oasis in Ahmedabad where professionals find balance, strength, and wellness.">
+    <title>Vinyasa Pilates & Yoga | Find Your Flow, Build Your Strength</title>
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=20251030b">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="{% static 'images/logo.png' %}" alt="Vinyasa Yoga & Pilates Logo">
+                    </div>
+                    <span class="logo-text">Vinyasa</span>
+                </div>
+                <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/" class="nav-link active">Home</a></li>
+                    <li><a href="/about" class="nav-link">Our Sanctuary</a></li>
+                    <li><a href="/practice" class="nav-link">Practice</a></li>
+                    <li><a href="/schedule" class="nav-link">Schedule</a></li>
+                    <li><a href="/memberships" class="nav-link">Memberships</a></li>
+                    <li><a href="/contact" class="nav-link">Contact</a></li>
+                    <li><a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Free Registration</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="{% static 'images/studio-1.jpg' %}" alt="Vinyasa Yoga Studio" class="hero-bg-image">
+            <div class="gradient-overlay"></div>
+            <div class="pattern-overlay"></div>
+            <div class="circular-overlay">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="circle circle-3"></div>
+                <div class="circle circle-4"></div>
+                <div class="circle circle-5"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Find Your Flow.<br>
+                    <span class="gradient-text">Build Your Strength.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    A tranquil urban oasis where professionals find balance and build strength through expert-led yoga and pilates.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-lg">
+                        <span>Free Registration</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="/practice" class="btn btn-secondary btn-lg">
+                        <span>Explore Classes</span>
+                    </a>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll to Explore</span>
+                    <div class="scroll-arrow">↓</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="howitworks">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Your journey to wellness starts with three simple steps that will transform your practice and overall wellbeing.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card" data-step="01">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/>
+                            <path d="M32 20V32L40 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Book Your Intro</h3>
+                    <p class="step-description">Reserve your spot online for a personalized introduction to our studio. We maintain small class sizes to ensure you receive the attention you deserve and get the most out of your practice from day one.</p>
+                </div>
+                <div class="step-card" data-step="02">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M32 10C32 10 20 20 20 32C20 44 26 54 32 54C38 54 44 44 44 32C44 20 32 10 32 10Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Personal Guidance</h3>
+                    <p class="step-description">Experience our expert-led sessions focused on proper alignment, mindful breathing, and building strength. Our certified instructors create a supportive environment for consistent progress and deeper understanding of your practice.</p>
+                </div>
+                <div class="step-card" data-step="03">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M10 40L20 30L30 35L40 25L54 35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="20" cy="30" r="3" fill="currentColor"/>
+                            <circle cx="30" cy="35" r="3" fill="currentColor"/>
+                            <circle cx="40" cy="25" r="3" fill="currentColor"/>
+                            <circle cx="54" cy="35" r="3" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Track Progress</h3>
+                    <p class="step-description">Follow your wellness journey with regular check-ins and personalized feedback. Our small-group setting allows instructors to monitor your development, make appropriate adjustments, and celebrate your achievements along the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Your Journey Starts Here Section -->
+    <section class="journey-section" id="journey">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Your Journey Starts Here</h2>
+                <p class="section-subtitle">Discover Your Perfect Practice</p>
+                <p class="section-description">Transform your life with expertly crafted classes designed to challenge the body, calm the mind, and elevate your spirit. Choose from our diverse range of sessions tailored for modern professionals.</p>
+            </div>
+            <div class="journey-grid">
+                <div class="journey-card">
+                    <div class="journey-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M32 10L40 25L56 28L44 40L47 56L32 48L17 56L20 40L8 28L24 25L32 10Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="journey-card-title">Expert-Led Sessions</h3>
+                    <p class="journey-card-description">Personalized guidance from certified professionals</p>
+                </div>
+
+                <div class="journey-card">
+                    <div class="journey-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="32" cy="20" r="8"/>
+                            <circle cx="48" cy="35" r="6"/>
+                            <circle cx="16" cy="35" r="6"/>
+                            <path d="M32 28V45M48 41V50M16 41V50"/>
+                        </svg>
+                    </div>
+                    <h3 class="journey-card-title">Small Group Classes</h3>
+                    <p class="journey-card-description">Intimate class sizes for personalized attention</p>
+                </div>
+
+                <div class="journey-card">
+                    <div class="journey-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="32" cy="32" r="22"/>
+                            <path d="M32 15V32L42 37"/>
+                            <path d="M20 10H44M20 54H44"/>
+                        </svg>
+                    </div>
+                    <h3 class="journey-card-title">Flexible Timings</h3>
+                    <p class="journey-card-description">Morning & evening slots for busy professionals</p>
+                </div>
+
+                <div class="journey-card">
+                    <div class="journey-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10 40L20 30L30 38L44 24L54 30"/>
+                            <circle cx="20" cy="30" r="3" fill="currentColor"/>
+                            <circle cx="30" cy="38" r="3" fill="currentColor"/>
+                            <circle cx="44" cy="24" r="3" fill="currentColor"/>
+                            <circle cx="54" cy="30" r="3" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="journey-card-title">Proven Results</h3>
+                    <p class="journey-card-description">Track your progress with measurable outcomes</p>
+                </div>
+
+                <div class="journey-card">
+                    <div class="journey-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="32" cy="28" r="12"/>
+                            <path d="M32 40C24 40 18 45 18 52H46C46 45 40 40 32 40Z"/>
+                            <path d="M25 22C25 22 28 18 32 18C36 18 39 22 39 22"/>
+                        </svg>
+                    </div>
+                    <h3 class="journey-card-title">Specialized Programs</h3>
+                    <p class="journey-card-description">Prenatal, postnatal & therapeutic yoga with expert guidance</p>
+                </div>
+
+                <div class="journey-card">
+                    <div class="journey-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="32" cy="32" r="20"/>
+                            <path d="M32 12V32M32 32L45 45"/>
+                            <circle cx="32" cy="32" r="3" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="journey-card-title">Mind-Body Connection</h3>
+                    <p class="journey-card-description">Enhance mental clarity and reduce stress through conscious practice</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sanctuary Section -->
+    <section class="sanctuary" id="sanctuary">
+        <div class="container">
+            <div class="sanctuary-content-center">
+                <h2 class="section-title">Welcome to Your Sanctuary</h2>
+                <p class="sanctuary-text">
+                    In the bustling heart of Ahmedabad, we've created something extraordinary – a space where the city's energy transforms into personal power, where breath becomes movement, and where every practice brings you closer to your truest self.
+                </p>
+                <p class="sanctuary-text">
+                    Vinyasa Yoga and Pilates isn't just a studio; it's a carefully curated experience designed for discerning individuals who understand that true wellness encompasses both physical strength and mental clarity. Our boutique approach ensures personalized attention in an environment that celebrates the sophistication of mindful movement.
+                </p>
+                <div class="sanctuary-cta">
+                    <a href="/about" class="btn btn-outline">Your Journey Starts Here</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-subtitle">Transformations from Our Community</p>
+                <p class="section-description">Real stories from professionals who've discovered balance, strength, and wellness through their practice at Vinyasa.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">
+                            After years of searching for the perfect studio, I finally found my home at Vinyasa. The expert guidance and calming atmosphere have transformed my entire approach to wellness.
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <span>PS</span>
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">Priya Sharma</h4>
+                            <p class="author-role">Marketing Director</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">
+                            The Pilates classes are exceptional! I've seen incredible improvements in my posture and core strength. The instructors truly understand the specific needs of working professionals.
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <span>RP</span>
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">Raj Patel</h4>
+                            <p class="author-role">Software Architect</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">
+                            Vinyasa isn't just a yoga studio – it's my sanctuary! The moment I step inside, stress melts away. It's become essential to my self-care routine and work-life balance.
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <span>AM</span>
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">Anita Mehta</h4>
+                            <p class="author-role">Healthcare Professional</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Impact</h2>
+                <p class="section-subtitle">Delivering Excellence</p>
+                <p class="section-description">Real numbers that reflect our commitment to quality and results</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">Active Members</div>
+                    <p class="stat-description">Growing community of wellness enthusiasts</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Classes Conducted</div>
+                    <p class="stat-description">Monthly expert-led sessions</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Years Experience</div>
+                    <p class="stat-description">Of professional instruction</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-label">Specialized Programs</div>
+                    <p class="stat-description">Tailored wellness solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="book">
+        <div class="cta-bg">
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Begin Your Journey Today</h2>
+                <p class="cta-subtitle">Experience what makes Vinyasa special with your first introductory class. New members enjoy their first session at a special rate.</p>
+                <div class="cta-buttons">
+                    <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-lg">Free Registration</a>
+                    <a href="https://forms.gle/B57AzXj2BdqLPpWB9" target="_blank" class="btn btn-outline-white btn-lg">Paid Inquiry Form</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

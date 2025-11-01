@@ -1,0 +1,712 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our expertly crafted yoga and pilates classes - From beginner-friendly Hatha to dynamic Vinyasa Flow.">
+    <title>Our Practice | Vinyasa Pilates & Yoga</title>
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/practice.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="{% static 'images/logo.png' %}" alt="Vinyasa Yoga & Pilates Logo">
+                    </div>
+                    <span class="logo-text">Vinyasa</span>
+                </div>
+                <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/about" class="nav-link">Our Sanctuary</a></li>
+                    <li><a href="/practice" class="nav-link active">Practice</a></li>
+                    <li><a href="/schedule" class="nav-link">Schedule</a></li>
+                    <li><a href="/memberships" class="nav-link">Memberships</a></li>
+                    <li><a href="/contact" class="nav-link">Contact</a></li>
+                    <li><a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Free Registration</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Practice Hero -->
+    <section class="practice-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Your Perfect Practice</h1>
+                <p class="hero-subtitle">Transform your life with expertly crafted classes designed to challenge the body, calm the mind, and elevate your spirit. Choose from our diverse range of sessions tailored for modern professionals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Filters -->
+    <section class="class-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="yoga">Yoga</button>
+                <button class="filter-btn" data-filter="pilates">Pilates</button>
+                <button class="filter-btn" data-filter="aerobic">Aerobic & Zumba</button>
+                <button class="filter-btn" data-filter="specialized">Specialized</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Classes Grid -->
+    <section class="practice-classes">
+        <div class="container">
+            <div class="classes-grid">
+                <!-- Hatha Yoga -->
+                <div class="class-card" data-category="yoga">
+                    <div class="class-image">
+                        <img src="{% static 'images/beginner-yoga.jpg' %}" alt="Hatha Yoga">
+                        <div class="class-badge beginner">Beginner Friendly</div>
+                    </div>
+                    <div class="class-content">
+                        <div class="class-category">Yoga Foundation</div>
+                        <h3 class="class-title">Hatha Yoga</h3>
+                        <p class="class-description">A gentle introduction to yoga focusing on posture, breath and relaxation.</p>
+                        
+                        <div class="class-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>60 min</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>Beginner</span>
+                            </div>
+                        </div>
+
+                        <div class="class-tags">
+                            <span class="tag">Gentle</span>
+                            <span class="tag">Relaxation</span>
+                        </div>
+
+                        <div class="class-actions">
+                            <a href="#" class="btn btn-outline btn-sm btn-learn-more" data-class="hatha">Learn More</a>
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vinyasa Flow -->
+                <div class="class-card popular" data-category="yoga">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="class-image">
+                        <img src="{% static 'images/vinyasa-flow.jpg' %}" alt="Vinyasa Flow">
+                        <div class="class-badge intermediate">Dynamic Flow</div>
+                    </div>
+                    <div class="class-content">
+                        <div class="class-category">Vinyasa Flow</div>
+                        <h3 class="class-title">Vinyasa Flow</h3>
+                        <p class="class-description">Dynamic flowing sequences that link breath with movement to build strength and flexibility.</p>
+                        
+                        <div class="class-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>75 min</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>Intermediate</span>
+                            </div>
+                        </div>
+
+                        <div class="class-tags">
+                            <span class="tag">Strength</span>
+                            <span class="tag">Flow</span>
+                        </div>
+
+                        <div class="class-actions">
+                            <a href="#" class="btn btn-outline btn-sm btn-learn-more" data-class="vinyasa">Learn More</a>
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Pilates -->
+                <div class="class-card" data-category="pilates">
+                    <div class="class-image">
+                        <img src="{% static 'images/core-pilates-new.jpg' %}" alt="Core Pilates">
+                        <div class="class-badge core">Core Focus</div>
+                    </div>
+                    <div class="class-content">
+                        <div class="class-category">Strength & Stability</div>
+                        <h3 class="class-title">Core Pilates</h3>
+                        <p class="class-description">Focused, mat-based session using precise, controlled movement to improve core strength and posture.</p>
+                        
+                        <div class="class-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>50 min</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>All Levels</span>
+                            </div>
+                        </div>
+
+                        <div class="class-tags">
+                            <span class="tag">Core</span>
+                            <span class="tag">Stability</span>
+                        </div>
+
+                        <div class="class-actions">
+                            <a href="#" class="btn btn-outline btn-sm btn-learn-more" data-class="core-pilates">Learn More</a>
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intermediate Pilates -->
+                <div class="class-card" data-category="pilates">
+                    <div class="class-image">
+                        <img src="{% static 'images/intermediate-pilates.jpg' %}" alt="Intermediate Pilates">
+                        <div class="class-badge intermediate">Intermediate</div>
+                    </div>
+                    <div class="class-content">
+                        <div class="class-category">Progressive Training</div>
+                        <h3 class="class-title">Intermediate Pilates</h3>
+                        <p class="class-description">Advanced mat-based pilates with progressive movements to challenge your strength and coordination.</p>
+                        
+                        <div class="class-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>55 min</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>Intermediate</span>
+                            </div>
+                        </div>
+
+                        <div class="class-tags">
+                            <span class="tag">Progressive</span>
+                            <span class="tag">Coordination</span>
+                        </div>
+
+                        <div class="class-actions">
+                            <a href="#" class="btn btn-outline btn-sm btn-learn-more" data-class="intermediate-pilates">Learn More</a>
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prenatal Yoga -->
+                <div class="class-card" data-category="specialized">
+                    <div class="class-image">
+                        <img src="{% static 'images/prenatal-yoga.jpg' %}" alt="Prenatal Yoga">
+                        <div class="class-badge special">Specialized</div>
+                    </div>
+                    <div class="class-content">
+                        <div class="class-category">Prenatal Care</div>
+                        <h3 class="class-title">Prenatal Yoga</h3>
+                        <p class="class-description">Safe and nurturing practice tailored for pregnancy. All trimesters welcome.</p>
+                        
+                        <div class="class-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>50 min</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>All Trimesters</span>
+                            </div>
+                        </div>
+
+                        <div class="class-tags">
+                            <span class="tag">Gentle</span>
+                            <span class="tag">Safe</span>
+                        </div>
+
+                        <div class="class-actions">
+                            <a href="#" class="btn btn-outline btn-sm btn-learn-more" data-class="prenatal">Learn More</a>
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post-Baby Recovery -->
+                <div class="class-card" data-category="specialized">
+                    <div class="class-image">
+                        <img src="{% static 'images/postnatal-recovery.jpg' %}" alt="Post-Baby Recovery">
+                        <div class="class-badge recovery">Recovery</div>
+                    </div>
+                    <div class="class-content">
+                        <div class="class-category">Postnatal Care</div>
+                        <h3 class="class-title">Post-Baby Recovery</h3>
+                        <p class="class-description">Gentle restorative sessions designed for postpartum recovery and bonding. Babies welcome.</p>
+                        
+                        <div class="class-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>45 min</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>Babies Welcome</span>
+                            </div>
+                        </div>
+
+                        <div class="class-tags">
+                            <span class="tag">Gentle</span>
+                            <span class="tag">Recovery</span>
+                        </div>
+
+                        <div class="class-actions">
+                            <a href="#" class="btn btn-outline btn-sm btn-learn-more" data-class="postbaby">Learn More</a>
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aerobic Fitness -->
+                <div class="class-card" data-category="aerobic">
+                    <div class="class-image">
+                        <img src="{% static 'images/aerobic-classes.png' %}" alt="Aerobic Fitness">
+                        <div class="class-badge energy">High Energy</div>
+                    </div>
+                    <div class="class-content">
+                        <div class="class-category">Cardio Training</div>
+                        <h3 class="class-title">Aerobic Fitness</h3>
+                        <p class="class-description">High-energy cardio and dance-based workouts to boost endurance and mood.</p>
+                        
+                        <div class="class-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>45 min</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>All Levels</span>
+                            </div>
+                        </div>
+
+                        <div class="class-tags">
+                            <span class="tag">Dance</span>
+                            <span class="tag">Cardio</span>
+                        </div>
+
+                        <div class="class-actions">
+                            <a href="#" class="btn btn-outline btn-sm btn-learn-more" data-class="aerobic">Learn More</a>
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zumba Fitness -->
+                <div class="class-card" data-category="aerobic">
+                    <div class="class-image">
+                        <img src="{% static 'images/zumba.png' %}" alt="Zumba Fitness">
+                        <div class="class-badge energy">High Energy</div>
+                    </div>
+                    <div class="class-content">
+                        <div class="class-category">Dance Fitness</div>
+                        <h3 class="class-title">Zumba Fitness</h3>
+                        <p class="class-description">Energetic Latin-inspired dance workout that combines fitness with fun dance moves and upbeat music.</p>
+                        
+                        <div class="class-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>50 min</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>All Levels</span>
+                            </div>
+                        </div>
+
+                        <div class="class-tags">
+                            <span class="tag">Dance</span>
+                            <span class="tag">Fun</span>
+                        </div>
+
+                        <div class="class-actions">
+                            <a href="#" class="btn btn-outline btn-sm btn-learn-more" data-class="zumba">Learn More</a>
+                            <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nutrition Program -->
+                <div class="class-card premium" data-category="specialized">
+                    <div class="premium-badge">Personalized Plan</div>
+                    <div class="class-image">
+                        <img src="{% static 'images/nutrition-plan.jpg' %}" alt="Nutrition Program">
+                        <div class="class-badge nutrition">Nutrition Coaching</div>
+                    </div>
+                    <div class="class-content">
+                        <div class="class-category">Nutrition Program</div>
+                        <h3 class="class-title">Personalized Nutrition Plan</h3>
+                        <p class="class-description">Comprehensive 3-month nutrition coaching program tailored to your wellness goals.</p>
+                        
+                        <div class="class-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>3-Month</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>Personal</span>
+                            </div>
+                        </div>
+
+                        <div class="class-tags">
+                            <span class="tag">Nutrition</span>
+                            <span class="tag">Transform</span>
+                        </div>
+
+                        <div class="class-actions">
+                            <a href="#" class="btn btn-outline btn-sm btn-learn-more" data-class="nutrition">Learn More</a>
+                            <a href="https://forms.gle/B57AzXj2BdqLPpWB9" target="_blank" class="btn btn-primary btn-sm">Paid Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-bg">
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Begin?</h2>
+                <p class="cta-subtitle">Book your first class today and experience the transformation.</p>
+                <div class="cta-buttons">
+                    <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-lg">Book Free Class</a>
+                    <a href="/schedule" class="btn btn-outline-white btn-lg">View Schedule</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Details Modal -->
+    <div id="classModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <img id="modalImage" src="" alt="" class="modal-img">
+                    <h2 id="modalTitle" class="modal-title"></h2>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>About This Class</h3>
+                    <p id="modalDescription" class="modal-text"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Key Benefits</h3>
+                    <ul id="modalBenefits" class="benefits-list"></ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>What to Expect</h3>
+                    <p id="modalWhatToExpect" class="modal-text"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Ideal For</h3>
+                    <p id="modalIdealFor" class="modal-text"></p>
+                </div>
+
+                <div class="modal-actions">
+                    <a href="/schedule" class="btn btn-secondary">View Schedule</a>
+                    <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary">Book This Class</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        // Class Filter Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const classCards = document.querySelectorAll('.class-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter cards
+                    classCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.classList.remove('hidden');
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.classList.add('hidden');
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+
+        // Modal functionality for Learn More
+        const modal = document.getElementById('classModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalImage = document.getElementById('modalImage');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalBenefits = document.getElementById('modalBenefits');
+        const modalWhatToExpect = document.getElementById('modalWhatToExpect');
+        const modalIdealFor = document.getElementById('modalIdealFor');
+        const closeModal = document.querySelector('.modal-close');
+        const modalOverlay = document.querySelector('.modal-overlay');
+
+        // Class details data
+        const classDetails = {
+            'hatha': {
+                title: 'Hatha Yoga',
+                image: '{% static "images/hatha-yoga.jpg" %}',
+                description: 'Hatha Yoga is the foundation of all yoga styles, focusing on physical postures (asanas) and breathing techniques (pranayama). This gentle practice emphasizes proper alignment, balance, and mindfulness.',
+                benefits: [
+                    'Improves flexibility and muscle strength',
+                    'Reduces stress and promotes relaxation',
+                    'Enhances body awareness and posture',
+                    'Balances mind and body connection',
+                    'Lowers blood pressure and heart rate'
+                ],
+                whatToExpect: 'Each 60-minute session begins with gentle warm-up stretches, followed by a series of standing and seated poses. You\'ll practice breath control throughout and end with a deep relaxation (Savasana). Perfect for beginners or those seeking a calmer practice.',
+                idealFor: 'Beginners, seniors, stress relief seekers, those recovering from injuries, anyone wanting to build a strong foundation in yoga'
+            },
+            'vinyasa': {
+                title: 'Vinyasa Flow',
+                image: '{% static "images/vinyasa-flow.jpg" %}',
+                description: 'Vinyasa Flow is a dynamic, flowing style of yoga that synchronizes movement with breath. Each pose flows seamlessly into the next, creating a moving meditation that builds heat, strength, and flexibility.',
+                benefits: [
+                    'Builds cardiovascular endurance and stamina',
+                    'Increases full-body strength and toning',
+                    'Improves flexibility and range of motion',
+                    'Enhances focus and mental clarity',
+                    'Burns calories while reducing stress'
+                ],
+                whatToExpect: 'This 75-minute energizing class includes Sun Salutations, standing sequences, balancing poses, and core work. Expect to move continuously, sweat, and challenge yourself. Modifications offered for different levels.',
+                idealFor: 'Intermediate practitioners, fitness enthusiasts, those seeking a workout combined with mindfulness, students with some yoga experience'
+            },
+            'core-pilates': {
+                title: 'Core Pilates',
+                image: '{% static "images/core-pilates.jpg" %}',
+                description: 'Core Pilates focuses on strengthening your powerhouse - the deep abdominal muscles, back, and pelvic floor. Using controlled movements and breath, you\'ll build a strong, stable center for better posture and overall strength.',
+                benefits: [
+                    'Develops strong, toned core muscles',
+                    'Improves posture and spinal alignment',
+                    'Reduces back pain and prevents injuries',
+                    'Enhances body control and coordination',
+                    'Creates long, lean muscle tone'
+                ],
+                whatToExpect: 'In this 50-minute mat-based class, you\'ll perform precise movements targeting your core. Expect exercises like the Hundred, Roll-Ups, Planks, and Side Series. Props like resistance bands and small balls may be used.',
+                idealFor: 'All fitness levels, those with back issues, postpartum recovery, athletes seeking core strength, desk workers with posture concerns'
+            },
+            'intermediate-pilates': {
+                title: 'Intermediate Pilates',
+                image: '{% static "images/intermediate-pilates.jpg" %}',
+                description: 'Take your Pilates practice to the next level with more challenging exercises that demand greater strength, flexibility, and control. This class progresses classical Pilates repertoire with flowing transitions.',
+                benefits: [
+                    'Advanced core strength and stability',
+                    'Increased flexibility throughout the body',
+                    'Enhanced balance and coordination',
+                    'Improved muscle endurance and control',
+                    'Better mind-body connection'
+                ],
+                whatToExpect: 'This 60-minute class includes advanced mat work like Teasers, Scissors, Control Balance, and complex spine articulation. You\'ll move through exercises with minimal rest, building heat and challenging your limits.',
+                idealFor: 'Students with Pilates experience, those comfortable with core work, fitness enthusiasts, individuals seeking progression beyond basics'
+            },
+            'prenatal': {
+                title: 'Prenatal Yoga',
+                image: '{% static "images/prenatal-yoga.jpg" %}',
+                description: 'Specially designed for expecting mothers, this gentle yoga class supports you through pregnancy with safe poses, breathing techniques, and relaxation methods that prepare mind and body for childbirth.',
+                benefits: [
+                    'Relieves pregnancy-related discomforts',
+                    'Strengthens muscles needed for labor',
+                    'Improves sleep quality and energy levels',
+                    'Reduces anxiety and promotes calm',
+                    'Builds community with other expecting mothers'
+                ],
+                whatToExpect: 'Each 60-minute class includes modified poses safe for all trimesters, pelvic floor exercises, breathing techniques for labor, and partner bonding time. Props like blocks, bolsters, and chairs provide support.',
+                idealFor: 'Pregnant women (all trimesters with doctor approval), first-time mothers, those seeking prenatal community support'
+            },
+            'postbaby': {
+                title: 'Post-Baby Recovery',
+                image: '{% static "images/post-baby.jpg" %}',
+                description: 'Designed for new mothers, this restorative program helps rebuild core strength, heal diastasis recti, and restore pelvic floor function while honoring your postpartum body\'s unique needs.',
+                benefits: [
+                    'Heals abdominal separation (diastasis recti)',
+                    'Restores pelvic floor strength',
+                    'Reduces postpartum back pain',
+                    'Boosts energy and mood',
+                    'Provides self-care time for new mothers'
+                ],
+                whatToExpect: 'This gentle 50-minute class focuses on deep core reconnection, gentle stretches, and relaxation. Babies are welcome! You\'ll learn safe progressions and exercises to continue at home.',
+                idealFor: 'New mothers (6+ weeks postpartum, 12+ weeks after C-section), those with diastasis recti, women rebuilding strength after pregnancy'
+            },
+            'aerobic': {
+                title: 'Aerobic Fitness',
+                image: '{% static "images/aerobic-fitness.jpg" %}',
+                description: 'High-energy cardio workout combining dance-inspired moves, bodyweight exercises, and rhythmic movements to boost your heart rate, burn calories, and improve cardiovascular fitness in a fun, energizing environment.',
+                benefits: [
+                    'Burns calories and aids weight management',
+                    'Improves cardiovascular health',
+                    'Increases stamina and endurance',
+                    'Boosts mood and reduces stress',
+                    'Enhances coordination and agility'
+                ],
+                whatToExpect: 'This 55-minute high-energy class includes warm-up, cardio intervals with dance moves, strength segments, and cool-down stretches. Music-driven and motivating, expect to sweat and have fun!',
+                idealFor: 'Fitness enthusiasts, those seeking weight loss, cardio lovers, people who enjoy group energy and music-based workouts'
+            },
+            'zumba': {
+                title: 'Zumba Fitness',
+                image: '{% static "images/zumba.png" %}',
+                description: 'Zumba is a dance-fitness party featuring Latin and international music with easy-to-follow choreography. It\'s a total workout combining cardio, muscle conditioning, balance and flexibility in an energetic, fun atmosphere.',
+                benefits: [
+                    'Burns 400-600 calories per session',
+                    'Full-body toning and conditioning',
+                    'Improves coordination and rhythm',
+                    'Stress relief through dance and music',
+                    'Social connection and community fun'
+                ],
+                whatToExpect: 'In this 50-minute dance party, you\'ll move to salsa, merengue, reggaeton, and more. No dance experience needed - just follow the instructor and have fun! Low and high-intensity options provided.',
+                idealFor: 'All fitness levels, dance enthusiasts, those who find traditional workouts boring, social exercisers, anyone seeking a fun calorie burn'
+            },
+            'nutrition': {
+                title: 'Nutrition Program',
+                image: '{% static "images/nutrition.jpg" %}',
+                description: 'Comprehensive nutrition guidance program combining personalized meal planning, nutritional education, and lifestyle coaching to help you achieve your wellness goals through sustainable, healthy eating habits.',
+                benefits: [
+                    'Personalized meal plans for your goals',
+                    'Understanding of nutritional principles',
+                    'Sustainable healthy eating habits',
+                    'Improved energy and vitality',
+                    'Support for weight management goals'
+                ],
+                whatToExpect: 'This 45-minute consultation includes nutritional assessment, goal setting, customized meal plans, and ongoing support. You\'ll receive recipes, shopping lists, and accountability check-ins.',
+                idealFor: 'Anyone seeking nutritional guidance, weight management support, athletes optimizing performance, those with specific dietary needs or health goals'
+            }
+        };
+
+        // Open modal when Learn More is clicked
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('btn-learn-more')) {
+                e.preventDefault();
+                const classId = e.target.getAttribute('data-class');
+                const details = classDetails[classId];
+                
+                if (details) {
+                    modalTitle.textContent = details.title;
+                    modalImage.src = details.image;
+                    modalDescription.textContent = details.description;
+                    
+                    // Populate benefits
+                    modalBenefits.innerHTML = details.benefits.map(benefit => 
+                        `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>${benefit}</li>`
+                    ).join('');
+                    
+                    modalWhatToExpect.textContent = details.whatToExpect;
+                    modalIdealFor.textContent = details.idealFor;
+                    
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+        });
+
+        // Close modal
+        function closeModalFunc() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeModal.addEventListener('click', closeModalFunc);
+        modalOverlay.addEventListener('click', closeModalFunc);
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModalFunc();
+            }
+        });
+    </script>
+</body>
+</html>

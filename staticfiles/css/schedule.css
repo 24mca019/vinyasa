@@ -1,0 +1,366 @@
+/* ==========================================
+   SCHEDULE PAGE SPECIFIC STYLES
+   ========================================== */
+
+/* ==========================================
+   SCHEDULE HERO
+   ========================================== */
+
+.schedule-hero {
+    margin-top: 70px;
+    padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+    background: linear-gradient(135deg, #7A9B8E 0%, #9CB5A8 100%);
+    text-align: center;
+}
+
+.schedule-hero .hero-title {
+    margin-bottom: var(--spacing-md);
+    color: var(--white);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.schedule-hero .hero-subtitle {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   SCHEDULE INFO
+   ========================================== */
+
+.schedule-info {
+    padding: var(--spacing-xl) 0;
+}
+
+.info-card {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info-card h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--dark);
+}
+
+.info-card p {
+    color: var(--gray-700);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ==========================================
+   WEEKLY SCHEDULE
+   ========================================== */
+
+.weekly-schedule {
+    padding: 60px 0;
+    background: var(--gray-100);
+}
+
+.day-schedule {
+    margin-bottom: 3rem;
+}
+
+.day-schedule:last-child {
+    margin-bottom: 0;
+}
+
+.day-header {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 3px solid var(--primary);
+}
+
+.day-header h2 {
+    color: var(--dark);
+    font-size: 1.75rem;
+}
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* ==========================================
+   CLASS CARDS
+   ========================================== */
+
+.class-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    border-left: 4px solid var(--primary);
+}
+
+.class-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.class-card.featured {
+    background: var(--gradient-soft);
+    border-left-color: var(--accent);
+}
+
+.class-time {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.class-name {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark);
+}
+
+.class-meta {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-md);
+}
+
+.level,
+.instructor {
+    display: inline-block;
+    padding: 0.375rem 0.875rem;
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.level {
+    background: var(--gray-200);
+    color: var(--dark);
+}
+
+.level.beginner {
+    background: #C8E6C9;
+    color: #2E7D32;
+}
+
+.level.intermediate {
+    background: #FFE0B2;
+    color: #E65100;
+}
+
+.level.advanced {
+    background: #FFCDD2;
+    color: #C62828;
+}
+
+.level.special {
+    background: var(--gradient-accent);
+    color: var(--white);
+}
+
+.instructor {
+    background: var(--gradient-soft);
+    color: var(--primary);
+    border: 1px solid var(--secondary);
+}
+
+.instructor.founder {
+    background: var(--gradient-accent);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.class-description {
+    color: var(--gray-700);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.class-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+/* ==========================================
+   SCHEDULE FEATURES
+   ========================================== */
+
+.schedule-features {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.features-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 2px solid rgba(143, 151, 121, 0.2);
+    border-top: 4px solid #8F9779;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(143, 151, 121, 0.25), 0 10px 20px rgba(0, 0, 0, 0.12);
+    border-top-color: #B09268;
+    border-color: rgba(176, 146, 104, 0.3);
+}
+
+.feature-badge {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #8F9779 0%, #B09268 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(143, 151, 121, 0.3);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-badge {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 40px rgba(176, 146, 104, 0.4);
+}
+
+.badge-icon {
+    font-size: 3rem;
+}
+
+.feature-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.feature-item p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+    .schedule-hero {
+        padding: 2.5rem 0 2rem;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem !important;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem !important;
+        line-height: 1.5;
+    }
+    
+    .weekly-schedule {
+        padding: 40px 0;
+    }
+    
+    .schedule-features {
+        padding: 40px 0;
+    }
+    
+    .features-grid-small {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-item {
+        padding: 2rem 1.5rem;
+    }
+    
+    .feature-badge {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .badge-icon {
+        font-size: 2.5rem;
+    }
+    
+    .classes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .day-schedule {
+        margin-bottom: 2.5rem;
+    }
+    
+    .day-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .class-card {
+        padding: 1.5rem;
+    }
+    
+    .class-time {
+        font-size: 0.9rem;
+    }
+    
+    .class-name {
+        font-size: 1.25rem;
+    }
+    
+    .class-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .class-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-hero {
+        padding: 2rem 0 1.5rem;
+    }
+    
+    .feature-badge {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .badge-icon {
+        font-size: 2.25rem;
+    }
+    
+    .class-card {
+        padding: 1.25rem;
+    }
+}

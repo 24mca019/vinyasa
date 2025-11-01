@@ -1,0 +1,344 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet our team at Vinyasa Yoga and Pilates - Expert instructors dedicated to your wellness journey.">
+    <title>Our Sanctuary - About Us | Vinyasa Pilates & Yoga</title>
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="{% static 'images/logo.png' %}" alt="Vinyasa Yoga & Pilates Logo">
+                    </div>
+                    <span class="logo-text">Vinyasa</span>
+                </div>
+                <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/about" class="nav-link active">Our Sanctuary</a></li>
+                    <li><a href="/practice" class="nav-link">Practice</a></li>
+                    <li><a href="/schedule" class="nav-link">Schedule</a></li>
+                    <li><a href="/memberships" class="nav-link">Memberships</a></li>
+                    <li><a href="/contact" class="nav-link">Contact</a></li>
+                    <li><a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-sm">Free Registration</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero simple-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Our Sanctuary</h1>
+                <p class="hero-subtitle">Where mindful movement meets modern wellness in the heart of Ahmedabad</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Founder</h2>
+                <p class="section-subtitle">Coach Deepak Tomar</p>
+                <p class="founder-role">Founder and Lead Instructor at Vinyasa Yoga and Pilates</p>
+            </div>
+            <div class="founder-grid">
+                <div class="founder-image">
+                    <img src="{% static 'images/deepak-tomar.png' %}" alt="Coach Deepak Tomar" class="founder-img">
+                </div>
+                <div class="founder-content">
+                    <p class="founder-bio">
+                        With extensive training and a passion for mindful movement, Coach Deepak Tomar founded Vinyasa Yoga and Pilates to bring authentic yoga wisdom and modern fitness expertise to the heart of Ahmedabad.
+                    </p>
+                    <p class="founder-bio">
+                        Deepak's journey in yoga and fitness began with a deep commitment to personal transformation and wellness. As founder, he has developed expertise across multiple disciplines including traditional yoga, modern pilates, and fitness training, making him uniquely qualified to guide students of all levels.
+                    </p>
+                    <p class="founder-bio">
+                        As a dedicated founder and instructor with specialized training in various movement practices, Deepak creates personalized experiences that honor each student's unique journey while building strength, flexibility, and inner peace. His teaching philosophy centers on making wellness accessible and transformative for modern lifestyles.
+                    </p>
+                    <div class="founder-credentials">
+                        <div class="credential-badge">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="currentColor"/>
+                            </svg>
+                            <span>Founder & Lead Instructor</span>
+                        </div>
+                        <div class="credential-badge">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="currentColor"/>
+                            </svg>
+                            <span>Certified Yoga Instructor</span>
+                        </div>
+                        <div class="credential-badge">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="currentColor"/>
+                            </svg>
+                            <span>Fitness Training Specialist</span>
+                        </div>
+                        <div class="credential-badge">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="currentColor"/>
+                            </svg>
+                            <span>Passionate Wellness Advocate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Expert Team</h2>
+                <p class="section-subtitle">Meet Our Instructors</p>
+                <p class="section-description">Our team of certified professionals is dedicated to guiding you on your wellness journey with expertise, compassion, and personalized attention.</p>
+            </div>
+            <div class="team-grid">
+                <!-- Founder Card -->
+                <div class="team-card featured">
+                    <div class="team-image">
+                        <img src="{% static 'images/deepak-tomar.png' %}" alt="Coach Deepak Tomar">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#" class="social-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="2"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Deepkumar Tomar</h3>
+                        <p class="team-role">Founder & Lead Instructor</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Yoga</span>
+                            <span class="specialty-tag">Fitness Training</span>
+                            <span class="specialty-tag">Nutrition</span>
+                            <span class="specialty-tag">Personal Training</span>
+                        </div>
+                        <div class="team-badges">
+                            <div class="badge">15+ Years Experience • Certified Nutritionist</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pilates Expert -->
+                <div class="team-card">
+                    <div class="team-image coming-soon">
+                        <div class="coming-soon-overlay">
+                            <span>Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Pilates & Aerobics Expert</h3>
+                        <p class="team-role">Specialist Instructor</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Core Pilates</span>
+                            <span class="specialty-tag">Aerobics</span>
+                            <span class="specialty-tag">Zumba</span>
+                        </div>
+                        <div class="team-badges">
+                            <div class="badge">Expert Confirmed Soon • Professional Certified</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prenatal/Postnatal Expert -->
+                <div class="team-card">
+                    <div class="team-image coming-soon">
+                        <div class="coming-soon-overlay">
+                            <span>Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Prenatal & Postnatal Expert</h3>
+                        <p class="team-role">Specialist Instructor</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Prenatal Yoga</span>
+                            <span class="specialty-tag">Post-Delivery Recovery</span>
+                            <span class="specialty-tag">Women's Wellness</span>
+                        </div>
+                        <div class="team-badges">
+                            <div class="badge">Expert Confirmed Soon • Specialized Training</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Philosophy</h2>
+                <p class="section-subtitle">Mindful Movement for Modern Life</p>
+                <p class="section-description">We believe wellness isn't a luxury—it's a necessity. Our approach combines traditional wisdom with contemporary understanding.</p>
+            </div>
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="3"/>
+                            <path d="M20 32h24M32 20v24" stroke="currentColor" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <h3>Balance</h3>
+                    <p>Finding harmony between strength and flexibility, effort and ease.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M32 10C32 10 20 18 20 32C20 46 26 54 32 54C38 54 44 46 44 32C44 18 32 10 32 10Z" stroke="currentColor" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <h3>Mindfulness</h3>
+                    <p>Every movement is an opportunity for presence and awareness.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <circle cx="24" cy="24" r="8" fill="currentColor"/>
+                            <circle cx="44" cy="24" r="8" fill="currentColor"/>
+                            <circle cx="32" cy="44" r="8" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Community</h3>
+                    <p>A supportive environment where every individual can thrive.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M10 40L20 28L32 35L44 22L54 30" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Growth</h3>
+                    <p>Supporting your journey toward becoming your best self.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Space Section -->
+    <section class="space-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Space</h2>
+                <p class="section-subtitle">A Sanctuary in the City</p>
+                <p class="section-description">Every detail thoughtfully designed to promote tranquility, focus, and transformation.</p>
+            </div>
+            <div class="space-features">
+                <div class="space-feature">
+                    <div class="feature-icon-small">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 1v4M12 19v4M1 12h4M19 12h4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Natural Light</h4>
+                    <p>Bright, welcoming space with optimal natural lighting.</p>
+                </div>
+                <div class="space-feature">
+                    <div class="feature-icon-small">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18V5l12-2v13M9 13l12-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Professional Audio</h4>
+                    <p>Crystal-clear sound system for guided sessions.</p>
+                </div>
+                <div class="space-feature">
+                    <div class="feature-icon-small">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Climate Control</h4>
+                    <p>Maintained temperature for comfortable practice.</p>
+                </div>
+                <div class="space-feature">
+                    <div class="feature-icon-small">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Quality Equipment</h4>
+                    <p>Professional mats, blocks, and fitness equipment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="commitment-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Commitment</h2>
+                <p class="section-subtitle">What Sets Us Apart</p>
+                <p class="section-description">Our dedication to excellence shows in every detail of your wellness experience.</p>
+            </div>
+            <div class="commitment-grid">
+                <div class="commitment-card">
+                    <div class="commitment-number">01</div>
+                    <h3>Premium Experience</h3>
+                    <p>Curated playlists and premium amenities reflect our excellence.</p>
+                </div>
+                <div class="commitment-card">
+                    <div class="commitment-number">02</div>
+                    <h3>Small Class Sizes</h3>
+                    <p>Limited sizes ensure personalized attention and support.</p>
+                </div>
+                <div class="commitment-card">
+                    <div class="commitment-number">03</div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Extensive timetable fits every professional lifestyle.</p>
+                </div>
+                <div class="commitment-card">
+                    <div class="commitment-number">04</div>
+                    <h3>Holistic Approach</h3>
+                    <p>Physical fitness, mental clarity, and emotional balance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-bg">
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Experience Our Sanctuary</h2>
+                <p class="cta-subtitle">Ready to discover what makes Vinyasa special? Join us for an introductory class and experience the difference that thoughtful design and expert instruction can make.</p>
+                <div class="cta-buttons">
+                    <a href="https://forms.gle/T5s37BaaraWXarSr7" target="_blank" class="btn btn-primary btn-lg">Free Registration</a>
+                    <a href="https://forms.gle/a87VR1YXmBD96CBK9" target="_blank" class="btn btn-outline-white btn-lg">General Inquiry</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

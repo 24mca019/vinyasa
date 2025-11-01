@@ -1,0 +1,26 @@
+# Virtual environment
+venv/
+.venv/
+
+# Byte-compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local files and databases
+db.sqlite3
+media/
+staticfiles/
+*.log
+
+# Version control
+.git/
+.gitignore
+
+# IDE and system files
+.vscode/
+*.bat
+*.ps1
+.DS_Store
+Thumbs.db

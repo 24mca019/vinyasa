@@ -3,13 +3,22 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-vinyasa-yoga-pilates-2025-change-in-production')
+# ------------------------
+# SECURITY SETTINGS
+# ------------------------
+SECRET_KEY = os.environ.get(
+    'SECRET_KEY',
+    'django-insecure-vinyasa-yoga-pilates-2025-change-in-production'
+)
 
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
 
-# Application definition
+# ------------------------
+# APPLICATIONS
+# ------------------------
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -22,7 +31,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # ✅ Add this line
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # ✅ required for static files on Vercel
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -33,10 +42,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'vinyasa_project.urls'
 
+# ------------------------
+# TEMPLATES
+# ------------------------
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'templates'],  # ✅ your templates folder
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -51,7 +63,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'vinyasa_project.wsgi.application'
 
-# Database
+# ------------------------
+# DATABASE
+# ------------------------
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -59,7 +73,9 @@ DATABASES = {
     }
 }
 
-# Password validation
+# ------------------------
+# PASSWORD VALIDATION
+# ------------------------
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
@@ -67,13 +83,17 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# Internationalization
+# ------------------------
+# LOCALIZATION
+# ------------------------
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Kolkata'
 USE_I18N = True
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
+# ------------------------
+# STATIC & MEDIA
+# ------------------------
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -82,21 +102,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-DEBUG = False
-
-ALLOWED_HOSTS = ['.vercel.app', 'localhost']
-
-CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
-
-STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-
+# ------------------------
+# DEFAULT FIELD
+# ------------------------
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

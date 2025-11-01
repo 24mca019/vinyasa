@@ -85,3 +85,18 @@ MEDIA_ROOT = BASE_DIR / 'media'
 CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+DEBUG = False
+
+ALLOWED_HOSTS = ['.vercel.app', 'localhost']
+
+CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
